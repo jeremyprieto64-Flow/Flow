@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- Mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>FLOW — Make wealth move.</title>
+  <meta
+    name="description"
+    content="FLOW is a community-powered vision for voluntarily passing crypto opportunity forward. Built around the Bittensor ecosystem."
+  />
+
+  <!-- Open Graph / X preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="FLOW — Make wealth move." />
+  <meta
+    property="og:description"
+    content="What if crypto winners shared a fraction of their upside to create new opportunities?"
+  />
+  <meta property="og:image" content="https://YOUR-DOMAIN.com/og-image.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FLOW — Make wealth move." />
+  <meta
+    name="twitter:description"
+    content="A vision for making crypto opportunity circulate."
+  />
+  <meta name="twitter:image" content="https://YOUR-DOMAIN.com/og-image.png" />
+
+  <meta name="theme-color" content="#0B0D10" />
+
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --surface: #11151a;
+      --surface-2: #151a20;
+      --text: #f4f3ef;
+      --muted: #929aa4;
+      --line: #252b32;
+      --accent: #ff9d2e;
+      --accent-soft: rgba(255, 157, 46, 0.12);
+      --max: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* =========================
+       NAV
+    ========================= */
+
+    nav {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+    }
+
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+      border: 1px solid #343b44;
+      border-radius: 50%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-mark::before,
+    .logo-mark::after {
+      content: "";
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      border: 2px solid var(--accent);
+      border-radius: 50%;
+    }
+
+    .logo-mark::before {
+      left: 4px;
+    }
+
+    .logo-mark::after {
+      right: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 720px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 100px 0;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      filter: blur(100px);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: clamp(58px, 10vw, 118px);
+      line-height: 0.9;
+      letter-spacing: -0.07em;
+      font-weight: 850;
+      margin-bottom: 34px;
+    }
+
+    .hero-description {
+      max-width: 760px;
+      font-size: clamp(20px, 3vw, 30px);
+      line-height: 1.25;
+      color: #d5d8dc;
+      letter-spacing: -0.025em;
+      margin-bottom: 40px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 20px;
+      border-radius: 9px;
+      border: 1px solid var(--line);
+      font-size: 14px;
+      font-weight: 750;
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--accent);
+      color: #101010;
+      border-color: var(--accent);
+    }
+
+    .button-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-secondary:hover {
+      border-color: #555d67;
+    }
+
+    /* =========================
+       MANIFESTO
+    ========================= */
+
+    .manifesto {
+      padding: 120px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .manifesto h2 {
+      max-width: 950px;
+      font-size: clamp(40px, 7vw, 78px);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+      font-weight: 800;
+    }
+
+    .highlight {
+      color: var(--accent);
+    }
+
+    /* =========================
+       PILLARS
+    ========================= */
+
+    .section {
+      padding: 120px 0;
+    }
+
+    .section-label {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1;
+      letter-spacing: -0.055em;
+      max-width: 800px;
+      margin-bottom: 55px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 28px;
+      min-height: 245px;
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #414953;
+    }
+
+    .card-number {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 48px;
+    }
+
+    .card h3 {
+      font-size: 25px;
+      letter-spacing: -0.035em;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       CYCLE
+    ========================= */
+
+    .cycle-wrapper {
+      margin-top: 30px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .cycle {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    .cycle-step {
+      background: var(--surface);
+      padding: 30px 22px;
+      border-right: 1px solid var(--line);
+      min-height: 160px;
+    }
+
+    .cycle-step:last-child {
+      border-right: none;
+    }
+
+    .cycle-step strong {
+      display: block;
+      font-size: 19px;
+      margin-bottom: 9px;
+    }
+
+    .cycle-step span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .arrow {
+      color: var(--accent);
+      font-size: 12px;
+      margin-top: 20px;
+    }
+
+    /* =========================
+       TAO
+    ========================= */
+
+    .tao-section {
+      background: var(--surface);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .tao-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .tao-grid h2 {
+      font-size: clamp(40px, 6vw, 70px);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+    }
+
+    .tao-copy {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.65;
+    }
+
+    .tao-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 28px;
+      border: 1px solid var(--line);
+      border-radius: 100px;
+      padding: 10px 15px;
+      font-size: 14px;
+      font-weight: 750;
+    }
+
+    .tao-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    /* =========================
+       PRINCIPLES
+    ========================= */
+
+    .principles {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .principle {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 25px;
+    }
+
+    .principle strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 17px;
+    }
+
+    .principle span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .final-cta {
+      text-align: center;
+      padding: 150px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .final-cta h2 {
+      font-size: clamp(48px, 8vw, 90px);
+      line-height: 0.95;
+      letter-spacing: -0.065em;
+      margin-bottom: 25px;
+    }
+
+    .final-cta p {
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 35px;
+      font-size: 18px;
+    }
+
+    /* =========================
+       DISCLAIMER
+    ========================= */
+
+    .disclaimer {
+      padding: 25px;
+      border: 1px solid #3a3022;
+      background: #15130f;
+      border-radius: 14px;
+      color: #b8ad9e;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 35px 0 55px;
+      color: var(--muted);
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 800px) {
+      .container {
+        width: min(100% - 32px, var(--max));
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 650px;
+        padding: 80px 0;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .cycle {
+        grid-template-columns: 1fr;
+      }
+
+      .cycle-step {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .cycle-step:last-child {
+        border-bottom: none;
+      }
+
+      .tao-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .principles {
+        grid-template-columns: 1fr;
+      }
+
+      .manifesto,
+      .section {
+        padding: 80px 0;
+      }
+
+      .final-cta {
+        padding: 100px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- NAVIGATION -->
+    <nav>
+      <a href="#" class="logo">
+        <span class="logo-mark"></span>
+        FLOW
+      </a>
+
+      <div class="nav-links">
+        <a href="#vision">Vision</a>
+        <a href="#cycle">The Cycle</a>
+        <a href="#tao">TAO</a>
+        <a href="#principles">Principles</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          Built around the Bittensor ecosystem
+        </div>
+
+        <h1>
+          Make wealth move.
+        </h1>
+
+        <p class="hero-description">
+          Crypto created a new generation of winners.
+          FLOW is a vision for helping create the next one —
+          by making voluntary crypto opportunity circulate.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#vision" class="button button-primary">
+            Explore the idea
+          </a>
+
+          <a href="#cycle" class="button button-secondary">
+            See the cycle ↓
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- MANIFESTO -->
+    <section id="vision" class="manifesto">
+
+      <h2>
+        Not giving away the bag.<br>
+        <span class="highlight">Sharing the upside.</span>
+      </h2>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section class="section">
+
+      <div class="section-label">
+        The idea
+      </div>
+
+      <h2 class="section-title">
+        Turn individual success into collective opportunity.
+      </h2>
+
+      <div class="cards">
+
+        <article class="card">
+          <div class="card-number">
+            01 / SHARE
+          </div>
+
+          <h3>
+            Give
+          </h3>
+
+          <p>
+            Successful participants voluntarily contribute
+            a fraction of their gains to a transparent community pool.
+          </p>
+        </article>
+
+
+        <article class="card">
+          <div class="card-number">
+            02 / START
+          </div>
+
+          <h3>
+            Opportunity
+          </h3>
+
+          <p>
+            New participants can receive limited allocations
+            designed to help them take their first responsible step.
+          </p>
+        </article>
+
+
+        <article class="card">
+          <div class="card-number">
+            03 / GROW
+          </div>
+
+          <h3>
+            Give back
+          </h3>
+
+          <p>
+            There is no obligation to repay anyone.
+            If a recipient eventually succeeds,
+            they can choose to pass opportunity forward.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- THE CYCLE -->
+    <section id="cycle" class="section">
+
+      <div class="section-label">
+        The flywheel
+      </div>
+
+      <h2 class="section-title">
+        One contribution can create another opportunity.
+      </h2>
+
+      <div class="cycle-wrapper">
+
+        <div class="cycle">
+
+          <div class="cycle-step">
+            <strong>WIN</strong>
+            <span>Someone succeeds.</span>
+            <div class="arrow">01</div>
+          </div>
+
+          <div class="cycle-step">
+            <strong>SHARE</strong>
+            <span>They voluntarily contribute.</span>
+            <div class="arrow">02</div>
+          </div>
+
+          <div class="cycle-step">
+            <strong>START</strong>
+            <span>Someone gets a new opportunity.</span>
+            <div class="arrow">03</div>
+          </div>
+
+          <div class="cycle-step">
+            <strong>GROW</strong>
+            <span>They learn and build.</span>
+            <div class="arrow">04</div>
+          </div>
+
+          <div class="cycle-step">
+            <strong>REPEAT</strong>
+            <span>Success can circulate.</span>
+            <div class="arrow">05</div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TAO -->
+    <section id="tao" class="section tao-section">
+
+      <div class="tao-grid">
+
+        <div>
+          <div class="section-label">
+            First ecosystem
+          </div>
+
+          <h2>
+            Start with<br>
+            Bittensor.
+          </h2>
+        </div>
+
+        <div>
+
+          <p class="tao-copy">
+            FLOW begins as a focused concept around
+            the Bittensor ecosystem and $TAO.
+          </p>
+
+          <p class="tao-copy" style="margin-top: 20px;">
+            The goal isn't another speculative token.
+            It's a transparent layer for voluntarily
+            passing opportunity forward.
+          </p>
+
+          <div class="tao-badge">
+            <span class="tao-dot"></span>
+            Built around $TAO
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRINCIPLES -->
+    <section id="principles" class="section">
+
+      <div class="section-label">
+        Principles
+      </div>
+
+      <h2 class="section-title">
+        Built around trust, transparency and voluntary participation.
+      </h2>
+
+      <div class="principles">
+
+        <div class="principle">
+          <strong>Non-custodial</strong>
+          <span>
+            Users should control their own assets.
+          </span>
+        </div>
+
+        <div class="principle">
+          <strong>No guaranteed returns</strong>
+          <span>
+            FLOW does not promise investment performance.
+          </span>
+        </div>
+
+        <div class="principle">
+          <strong>No recruitment rewards</strong>
+          <span>
+            Receiving an allocation never requires recruiting others.
+          </span>
+        </div>
+
+        <div class="principle">
+          <strong>Transparent</strong>
+          <span>
+            Contributions and allocations should be verifiable.
+          </span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+
+      <div class="eyebrow">
+        The vision
+      </div>
+
+      <h2>
+        Your success<br>
+        can start someone else's.
+      </h2>
+
+      <p>
+        FLOW is an early-stage concept.
+        The mission is simple:
+        make crypto opportunity move.
+      </p>
+
+      <a href="#vision" class="button button-primary">
+        Follow the idea
+      </a>
+
+    </section>
+
+
+    <!-- DISCLAIMER -->
+    <section style="padding-bottom: 80px;">
+
+      <div class="disclaimer">
+
+        <strong>Concept / prototype.</strong><br><br>
+
+        FLOW is an early-stage concept and does not constitute
+        investment advice, a promise of returns, or an offer
+        of financial services. No participant is required to
+        contribute, recruit others, or generate a return.
+        Any future implementation involving crypto-assets
+        would need to comply with applicable laws and regulations.
+
+      </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+      <span>
+        FLOW — Make wealth move.
+      </span>
+
+      <span>
+        Concept v0.1 · $TAO · Non-custodial by design
+      </span>
+
+    </footer>
+
+  </div>
+
+</body>
+</html>
